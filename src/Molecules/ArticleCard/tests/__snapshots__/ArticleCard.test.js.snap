@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artical Component fire click on component 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-mvofm7-MuiPaper-root-MuiCard-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <img
+      alt=""
+      class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-kqfc7p-MuiCardMedia-root"
+      height="293"
+      src="https://static01.nyt.com/images/2024/09/28/well/28Well-DASH/28Well-DASH-mediumThreeByTwo440.jpg"
+      width="440"
+    />
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <div
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-13y79c5-MuiTypography-root"
+      >
+        The Heart-Healthy Diet Hardly Anyone Is Talking About
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
+      >
+        The DASH diet was shown to lower blood pressure decades ago, yet few people follow it. Here’s how to give it a try.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
+      >
+        <em>
+          By Alice Callahan
+        </em>
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
+      >
+        Published on:
+         
+        28/9/2024
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Artical Component renders without crashing 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-mvofm7-MuiPaper-root-MuiCard-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <img
+      alt=""
+      class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-kqfc7p-MuiCardMedia-root"
+      height="293"
+      src="https://static01.nyt.com/images/2024/09/28/well/28Well-DASH/28Well-DASH-mediumThreeByTwo440.jpg"
+      width="440"
+    />
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <div
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-13y79c5-MuiTypography-root"
+      >
+        The Heart-Healthy Diet Hardly Anyone Is Talking About
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
+      >
+        The DASH diet was shown to lower blood pressure decades ago, yet few people follow it. Here’s how to give it a try.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
+      >
+        <em>
+          By Alice Callahan
+        </em>
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
+      >
+        Published on:
+         
+        28/9/2024
+      </p>
+    </div>
+  </div>
+</div>
+`;
