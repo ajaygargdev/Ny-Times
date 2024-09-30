@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Box, Typography, Button } from "@mui/material";
+import { Modal, Box, Button } from "@mui/material";
 import ArticleCard from "../ArticleCard/ArticleCard";
 
 const style = {

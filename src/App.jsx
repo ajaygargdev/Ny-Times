@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import React from "react";
 import Template from "./Template";
 import { Provider } from "react-redux";
 import { store } from "./Store/Store";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import ArticalDetails from "../../Organism/ArticlesDetails";
 import { AppBar, Toolbar, Typography, Container, Box } from "@mui/material";
 import Loader from "../../Atoms/Loader/Loader";

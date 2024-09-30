@@ -6,9 +6,7 @@ import ModelArticle from "../ModelArticle/ModelArticle";
 
 const ArticlesList = () => {
   const articles = useSelector((state) => state.root.articles);
-  console.log(articles);
   const currentPage = useSelector((state) => state.root.currentPage);
-  console.log(currentPage);
   const [currentArticle, setCurrentArtical] = useState(null);
 
   const articlesList = useMemo(

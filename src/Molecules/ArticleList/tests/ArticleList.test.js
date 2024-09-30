@@ -3,31 +3,15 @@
  */
 
 import React from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import ArticleList from "../ArticleList";
 import { mockData } from "./ArticalList.mock";
 import { Provider } from "react-redux";
-import { store } from "../../../Store/Store";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 
 const middleware = [thunk];
 const mockStore = configureStore({ middleware });
-
-// jest.mock("react-redux", () => ({
-//   ...jest.requireActual("react-redux"),
-//   useSelector: jest.fn(),
-//   useDispatch: jest.fn(),
-// }));
-
-// require("react-redux").useSelector.mockImplementation((callback) =>
-//   callback({
-//     root: {
-//       articles: { "1": mockData.results[0] },
-//       currentPage: "1",
-//     },
-//   }),
-// );
 
 describe("ArticalList Component", () => {
   let store;
@@ -35,7 +19,7 @@ describe("ArticalList Component", () => {
   beforeEach(() => {
     store = mockStore({
       root: {
-        articles: { "1": mockData.results[0] },
+        articles: { 1: mockData.results },
         currentPage: "1",
       },
     });
@@ -46,7 +30,7 @@ describe("ArticalList Component", () => {
   });
 
   test("renders without crashing", () => {
-
+    console.log(store);
     const { container } = render(
       <Provider store={store}>
         <ArticleList />
@@ -55,29 +39,32 @@ describe("ArticalList Component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test("fire click on component", async () => {
-    // require("react-redux").useSelector.mockImplementation((callback) =>
-    //   callback({
-    //     root: {
-    //       articles: { "1": mockData.results[0] },
-    //       currentPage: "1",
-    //     },
-    //   }),
-    // );
-    const {container,getByText} = await render(
+  test("Model Popup should open", async () => {
+    await render(
       <Provider store={store}>
         <ArticleList />
       </Provider>,
     );
-    await waitFor(async ()=>{
-      const node =getByText(/The Heart-Healthy/i);
-      await fireEvent.click(node);
-      expect(container).toMatchSnapshot();  
-    })
-    // await new Promise((resolve) => setTimeout(resolve, 500));
-    // console.log(screen.debug());
-    // const node =await getByText(/The Heart-Healthy/i);
-    // fireEvent.click(node);
-    // expect(container).toMatchSnapshot();
+
+    const node = await screen.getByText(/The Heart-Healthy/i);
+    await fireEvent.click(node);
+    const modelButton = await screen.getByText(/close/i);
+    expect(modelButton).not.toBeNull();
+  });
+
+  test("Model Popup should close after open", async () => {
+    await render(
+      <Provider store={store}>
+        <ArticleList />
+      </Provider>,
+    );
+
+    const node = await screen.getByText(/The Heart-Healthy/i);
+    await fireEvent.click(node);
+    const modelButton = await screen.getByText(/close/i);
+    expect(modelButton).not.toBeNull();
+    await fireEvent.click(modelButton);
+    const modelButtonaAfter = await screen.queryByText(/close/i);
+    expect(modelButtonaAfter).toBeNull();
   });
 });
