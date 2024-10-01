@@ -21,7 +21,9 @@ const NyView = () => {
         </Toolbar>
       </AppBar>
       <Container data-testid="main" component="main" sx={{ mt: 4, mb: 2 }}>
-        {isLoading ? <Loader /> : error ? error : <ArticalDetails />}
+        {isLoading && <Loader />}
+        {!isLoading && error && error}
+        {!isLoading && !error && <ArticalDetails />}
       </Container>
       <Box
         component="footer"
