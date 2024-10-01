@@ -4,7 +4,11 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 const ArticleCard = ({ article, handleClick = () => {} }) => {
   return (
     <>
-      <Card sx={{ maxWidth: 345, marginBottom: 2 }} onClick={handleClick}>
+      <Card
+        data-testid="artical"
+        sx={{ maxWidth: 345, marginBottom: 2 }}
+        onClick={handleClick}
+      >
         {article.media[0] && (
           <CardMedia
             component="img"

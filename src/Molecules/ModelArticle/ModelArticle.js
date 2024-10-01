@@ -21,10 +21,16 @@ const ModelArticle = ({ article, handleClose }) => {
       onClose={handleClose}
       aria-labelledby="modal-title"
       aria-describedby="modal-description"
+      data-testid="model"
     >
       <Box sx={style}>
         <ArticleCard allowModel={false} article={article} />
-        <Button onClick={handleClose} variant="contained" sx={{ mt: 2 }}>
+        <Button
+          onClick={handleClose}
+          data-testid="model-close"
+          variant="contained"
+          sx={{ mt: 2 }}
+        >
           Close
         </Button>
       </Box>

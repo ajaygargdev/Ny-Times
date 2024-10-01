@@ -20,7 +20,10 @@ const ArticlesList = () => {
 
   return (
     <>
-      <Container sx={{ "flex-wrap": "wrap", display: "flex", gap: "20px" }}>
+      <Container
+        data-testid="artical-list"
+        sx={{ "flex-wrap": "wrap", display: "flex", gap: "20px" }}
+      >
         {Array.isArray(articlesList) &&
           articlesList.map((article) => (
             <ArticleCard
