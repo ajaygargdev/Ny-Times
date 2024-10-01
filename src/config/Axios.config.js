@@ -5,11 +5,9 @@ const axiosClient = axios.create({
   baseURL: BASE_URL,
 });
 
-axiosClient.interceptors.request.use(
-  (config) => {
-    config.params = { ...config.params, "api-key": API_KEY };
-    return config;
-  },
-);
+axiosClient.interceptors.request.use((config) => {
+  config.params = { ...config.params, "api-key": API_KEY };
+  return config;
+});
 
 export default axiosClient;

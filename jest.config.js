@@ -1,16 +1,16 @@
 module.exports = {
-  testEnvironment: 'jsdom',
+  testEnvironment: "jsdom",
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/index.js',
-    '!src/index.jsx',
-    '!src/reportWebVitals.js',
-    '!src/serviceWorker.js',
-    '!**/node_modules/**',
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/index.js",
+    "!src/index.jsx",
+    "!src/reportWebVitals.js",
+    "!src/serviceWorker.js",
+    "!**/node_modules/**",
   ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov'],
+  coverageDirectory: "coverage",
+  coverageReporters: ["text", "lcov"],
   coverageThreshold: {
     global: {
       branches: 80,
@@ -19,5 +19,5 @@ module.exports = {
       statements: 80,
     },
   },
-  testPathIgnorePatterns: ['/node_modules/', '/build/'],
+  testPathIgnorePatterns: ["/node_modules/", "/build/"],
 };

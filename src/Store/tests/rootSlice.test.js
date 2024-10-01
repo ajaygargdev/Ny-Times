@@ -63,6 +63,29 @@ describe("root slice", () => {
     });
   });
 
+  test("test fetch articals withoutArticals", async () => {
+    axiosClient.get.mockResolvedValue({ status: 200, data: mockData });
+
+    await store.dispatch(fetchArticles());
+
+    const actions = store.getActions();
+    expect(actions[0].type).toBe(fetchArticles.pending.type);
+    expect(actions[1].type).toBe(fetchArticles.fulfilled.type);
+
+    expect(
+      rootReducer(undefined, {
+        type: "root/fetchArticles/fulfilled",
+        payload: { copyright: "copyright", page: 1 },
+      }),
+    ).toEqual({
+      articles: { 1: [] },
+      copyright: "copyright",
+      isLoading: false,
+      error: null,
+      currentPage: "1",
+    });
+  });
+
   test("test fetch articals with error", async () => {
     axiosClient.get.mockResolvedValue({});
 
