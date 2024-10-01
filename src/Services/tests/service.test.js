@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 
-import React from "react";
 import { mockData } from "./service.mock";
 import { getArticles } from "..";
 import axiosClient from "../../config/Axios.config";
