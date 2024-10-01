@@ -3,38 +3,35 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 const ArticleCard = ({ article, handleClick = () => {} }) => {
   return (
-    <>
-      <Card
-        data-testid="artical"
-        sx={{ maxWidth: 345, marginBottom: 2 }}
-        onClick={handleClick}
-      >
-        {article.media[0] && (
-          <CardMedia
-            component="img"
-            height={article.media[0]["media-metadata"][2].height}
-            width={article.media[0]["media-metadata"][2].width}
-            image={article.media[0]["media-metadata"][2].url}
-            alt={article.media[0].caption}
-          />
-        )}
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {article.title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {article.abstract}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            <em>{article.byline}</em>
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Published on:{" "}
-            {new Date(article.published_date).toLocaleDateString()}
-          </Typography>
-        </CardContent>
-      </Card>
-    </>
+    <Card
+      data-testid="artical"
+      sx={{ maxWidth: 345, marginBottom: 2 }}
+      onClick={handleClick}
+    >
+      {article.media[0] && (
+        <CardMedia
+          component="img"
+          height={article.media[0]["media-metadata"][2].height}
+          width={article.media[0]["media-metadata"][2].width}
+          image={article.media[0]["media-metadata"][2].url}
+          alt={article.media[0].caption}
+        />
+      )}
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {article.title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {article.abstract}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <em>{article.byline}</em>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Published on: {new Date(article.published_date).toLocaleDateString()}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };
 
