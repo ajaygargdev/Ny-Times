@@ -11,7 +11,7 @@ export const getArticles = async (page = 1) => {
         data: res.data,
       };
     }
-    return { success: false };
+    return { success: false, error: "error" };
   } catch (err) {
     return {
       success: false,

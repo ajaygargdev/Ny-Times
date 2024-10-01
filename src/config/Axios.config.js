@@ -10,9 +10,6 @@ axiosClient.interceptors.request.use(
     config.params = { ...config.params, "api-key": API_KEY };
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  },
 );
 
 export default axiosClient;
