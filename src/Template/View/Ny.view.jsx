@@ -20,7 +20,7 @@ const NyView = () => {
           <Typography variant="h6">The New York Times</Typography>
         </Toolbar>
       </AppBar>
-      <Container component="main" sx={{ mt: 4, mb: 2 }}>
+      <Container data-testid="main" component="main" sx={{ mt: 4, mb: 2 }}>
         {isLoading ? <Loader /> : error ? error : <ArticalDetails />}
       </Container>
       <Box
