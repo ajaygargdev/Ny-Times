@@ -2,7 +2,7 @@ import rootReducer, { changePage, fetchArticles } from "../rootSlice";
 import configureStore from "redux-mock-store";
 import { thunk } from "redux-thunk";
 import axiosClient from "../../config/Axios.config";
-import { mockData } from "./rootSlice.mock";
+import { mockData } from "../../mock";
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);

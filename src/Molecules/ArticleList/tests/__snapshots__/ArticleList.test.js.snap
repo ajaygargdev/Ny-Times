@@ -41,8 +41,7 @@ exports[`ArticalList Component renders without crashing 1`] = `
         <p
           class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
         >
-          Published on:
-           
+          Published on: 
           28/9/2024
         </p>
       </div>

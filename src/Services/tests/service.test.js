@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { mockData } from "./service.mock";
+import { mockData } from "../../mock";
 import { getArticles } from "..";
 import axiosClient from "../../config/Axios.config";
 

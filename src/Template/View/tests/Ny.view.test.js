@@ -8,7 +8,7 @@ import NyView from "../Ny.view";
 import { store } from "../../../Store/Store";
 import axiosClient from "../../../config/Axios.config";
 import { Provider } from "react-redux";
-import { mockData } from "./Ny.view.mock";
+import { mockData } from "../../../mock";
 
 const storeWrapper = (Comp) => {
   return (
