@@ -4,7 +4,6 @@ import { getArticles } from "../Services";
 export const fetchArticles = createAsyncThunk(
   "root/fetchArticles",
   async (page = 1) => {
-    console.log("-----test----");
     const response = await getArticles(page);
     if (!response.success) {
       throw new Error("Network response was not ok");
@@ -25,8 +24,8 @@ export const rootSlice = createSlice({
   name: "root",
   initialState,
   reducers: {
-    changePage: (state, payload) => {
-      state.currentPage = payload + "";
+    changePage: (state, action) => {
+      state.currentPage = action.payload + "";
     },
   },
   extraReducers: (builder) => {
@@ -45,7 +44,7 @@ export const rootSlice = createSlice({
       })
       .addCase(fetchArticles.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.error;
+        state.error = action.payload.error;
       });
   },
 });

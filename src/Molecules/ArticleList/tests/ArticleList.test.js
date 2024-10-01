@@ -30,7 +30,6 @@ describe("ArticalList Component", () => {
   });
 
   test("renders without crashing", () => {
-    console.log(store);
     const { container } = render(
       <Provider store={store}>
         <ArticleList />
