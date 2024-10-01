@@ -21,6 +21,7 @@ exports[`Container Component renders without crashing 1`] = `
     </header>
     <main
       class="MuiContainer-root MuiContainer-maxWidthLg css-1m3eoub-MuiContainer-root"
+      data-testid="main"
     >
       <div
         class="MuiBox-root css-1lb6n3v"
