@@ -29,7 +29,7 @@ const ArticleCard = ({ article, handleClick = () => {} }) => {
           <em>{article.byline}</em>
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Published on: {new Date(article.published_date).toLocaleDateString()}
+          Published on: {article.published_date}
         </Typography>
       </CardContent>
     </Card>
