@@ -7,16 +7,16 @@ import ModelArticle from "../ModelArticle/ModelArticle";
 const ArticlesList = () => {
   const articles = useSelector((state) => state.root.articles);
   const currentPage = useSelector((state) => state.root.currentPage);
-  const [currentArticle, setCurrentArtical] = useState(null);
+  const [currentArticle, setCurrentArticle] = useState(null);
 
   const articlesList = useMemo(
     () => articles[currentPage] || [],
     [currentPage, articles],
   );
 
-  const handleClick = (article) => setCurrentArtical(article);
+  const handleClick = (article) => setCurrentArticle(article);
 
-  const handleClose = () => setCurrentArtical(null);
+  const handleClose = () => setCurrentArticle(null);
 
   return (
     <>
