@@ -25,7 +25,7 @@ export default [
       jest: pluginJest,
     },
     rules: {
-      "react/prop-types": "off",
+      "react/prop-types": "error",
     },
   },
 ];

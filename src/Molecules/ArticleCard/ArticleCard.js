@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
 const ArticleCard = ({ article, handleClick = () => {} }) => {
   return (
@@ -33,6 +34,29 @@ const ArticleCard = ({ article, handleClick = () => {} }) => {
       </CardContent>
     </Card>
   );
+};
+
+ArticleCard.propTypes = {
+  article: PropTypes.shape({
+    published_date: PropTypes.string,
+    byline: PropTypes.string,
+    title: PropTypes.string,
+    abstract: PropTypes.string,
+    media: PropTypes.arrayOf(
+      PropTypes.shape({
+        caption: PropTypes.string.isRequired,
+        "media-metadata": PropTypes.arrayOf(
+          PropTypes.shape({
+            url: PropTypes.string.isRequired,
+            format: PropTypes.string.isRequired,
+            height: PropTypes.string.isRequired,
+            width: PropTypes.string.isRequired,
+          }),
+        ).isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
+  handleClick: PropTypes.func,
 };
 
 export default ArticleCard;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, Box, Button } from "@mui/material";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import PropTypes from "prop-types";
 
 const style = {
   position: "absolute",
@@ -36,6 +37,11 @@ const ModelArticle = ({ article, handleClose }) => {
       </Box>
     </Modal>
   );
+};
+
+ModelArticle.propTypes = {
+  article: PropTypes.shape({}).isRequired,
+  handleClose: PropTypes.func,
 };
 
 export default ModelArticle;
