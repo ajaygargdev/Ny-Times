@@ -5,7 +5,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import NyContainer from "../Ny.container";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 
 const storeWrapper = (Comp) => {
   const NewComp = () => {
@@ -14,7 +14,7 @@ const storeWrapper = (Comp) => {
         <Comp />
       </Provider>
     );
-  }
+  };
   NewComp.displayName = "Container";
   return NewComp;
 };

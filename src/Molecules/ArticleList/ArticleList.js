@@ -22,7 +22,12 @@ const ArticlesList = () => {
     <>
       <Container
         data-testid="artical-list"
-        sx={{ "flex-wrap": "wrap", display: "flex", gap: "20px" }}
+        sx={{
+          "flex-wrap": "wrap",
+          display: "flex",
+          gap: "20px",
+          justifyContent: "center",
+        }}
       >
         {Array.isArray(articlesList) &&
           articlesList.map((article) => (

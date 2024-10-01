@@ -3,7 +3,7 @@
 exports[`ArticalList Component renders without crashing 1`] = `
 <div>
   <div
-    class="MuiContainer-root MuiContainer-maxWidthLg css-1lgbfpa-MuiContainer-root"
+    class="MuiContainer-root MuiContainer-maxWidthLg css-1schs4p-MuiContainer-root"
     data-testid="artical-list"
   >
     <div

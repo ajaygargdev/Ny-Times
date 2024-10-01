@@ -4,7 +4,7 @@ This is a React web application to displays the most popular articles from the N
 
 ## Prerequisites
 
-Install latest Node version (Used Node 22) 
+Install latest Node version (Used Node 22)
 
 ## Installation
 
@@ -22,7 +22,6 @@ Install latest Node version (Used Node 22)
 - `npm run lint:fix`: Fixes ESLint errors.
 - `npm run format`: Formats code using Prettier.
 - `npx cypress open`: Run Visual Test.
-
 
 ## Test Coverage Report
 
@@ -42,4 +41,3 @@ Install latest Node version (Used Node 22)
 - React-testing-library - For testing
 - Cypress - For visual testing
 - SonarQube - For Code quality and Security Vulnerabilities
-
