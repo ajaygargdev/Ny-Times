@@ -13,26 +13,29 @@ jobs:
     permissions:
       contents: read    # Allows read access to repository contents
       actions: read     # Allows read access to other actions
-      secrets: read     # Allows access to secrets
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+
       - name: Install dependencies
         run: npm install
+
       - name: Run tests
         run: npm test -- --coverage
+        
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
           args: >
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-            -Dsonar.organization=ajaygargdev
-            -Dsonar.projectKey=ajaygargdev_Ny-Times
+            -Dsonar.organization=*
+            -Dsonar.projectKey=*
             -Dsonar.sources=src
             -Dsonar.host.url=https://sonarcloud.io
