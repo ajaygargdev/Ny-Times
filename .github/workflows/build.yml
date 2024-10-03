@@ -10,6 +10,11 @@ jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
+    permissions:
+      contents: read    # Allows read access to repository contents
+      actions: read     # Allows read access to other actions
+      secrets: read     # Allows access to secrets
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,5 +34,5 @@ jobs:
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             -Dsonar.organization=ajaygargdev
             -Dsonar.projectKey=ajaygargdev_Ny-Times
-            -Dsonar.sources=.
+            -Dsonar.sources=src
             -Dsonar.host.url=https://sonarcloud.io
