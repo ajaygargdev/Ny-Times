@@ -28,5 +28,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=ajaygargdev_Ny-Times
             -Dsonar.organization=ajaygargdev
+            -Dsonar.projectKey=ajaygargdev_Ny-Times
+            -Dsonar.sources=.
+            -Dsonar.host.url=https://sonarcloud.io
