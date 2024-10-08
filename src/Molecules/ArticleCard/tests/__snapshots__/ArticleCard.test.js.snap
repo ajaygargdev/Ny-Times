@@ -38,7 +38,7 @@ exports[`Artical Component fire click on component 1`] = `
         class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
       >
         Published on: 
-        2024-09-28
+        October 1, 2024
       </p>
     </div>
   </div>
@@ -83,7 +83,7 @@ exports[`Artical Component renders without crashing 1`] = `
         class="MuiTypography-root MuiTypography-body2 css-atovpb-MuiTypography-root"
       >
         Published on: 
-        2024-09-28
+        October 1, 2024
       </p>
     </div>
   </div>

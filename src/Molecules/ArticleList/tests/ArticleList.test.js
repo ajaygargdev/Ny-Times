@@ -15,6 +15,11 @@ const mockStore = configureStore({ middleware });
 
 describe("ArticalList Component", () => {
   let store;
+  beforeAll(() => {
+    jest
+      .spyOn(Date.prototype, "toLocaleDateString")
+      .mockImplementation(() => "October 1, 2024");
+  });
 
   beforeEach(() => {
     store = mockStore({
